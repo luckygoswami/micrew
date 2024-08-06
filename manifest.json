@@ -1,18 +1,16 @@
 {
-  "manifest_version": 3,
-  "name": "Print Hi Extension",
+  "name": "micrew",
   "version": "1.0",
-  "permissions": ["activeTab", "scripting"],
-  "background": {
-    "service_worker": "background.js"
+  "manifest_version": 3,
+  "permissions": ["tabs"],
+  "action": {
+    "default_title": "Click to run searches",
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content-script.js"]
     }
-  ],
-  "action": {
-    "default_title": "Start Printing Hi"
-  }
+  ]
 }
