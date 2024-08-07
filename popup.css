@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+.count-div,
+.interval-div,
+.search-div {
+  margin: 1rem;
+}
+
+#stop-guide {
+  padding: 5px;
+}
+
+.search-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  #go_search {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 3px;
+    width: 100%;
+  }
+}
+
+#go_search,
+#searchCount,
+#searchInterval {
+  &:hover {
+    cursor: pointer;
+  }
+}

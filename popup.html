@@ -6,34 +6,49 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+
+    <link
+      rel="stylesheet"
+      href="popup.css"
+    />
+
     <title>Micrew</title>
   </head>
   <body>
     <div class="main">
-      <input
-        type="range"
-        id="searchCount"
-        min="1"
-        max="50"
-        value="30"
-      />
-      <p>search counts: <output id="countValue"></output></p>
-      <input
-        type="range"
-        id="searchInterval"
-        min="3"
-        max="10"
-        value="7"
-      />
-      <p>
-        search interval: <output id="intervalValue"></output>s <br />
-        (7s recommended)
-      </p>
-
-      <div class="search">
-        <p>searches executed: <strong id="completeSearch">0</strong></p>
-        <button id="go_search">start searching</button>
+      <div class="count-div">
+        <input
+          type="range"
+          id="searchCount"
+          min="1"
+          max="50"
+          value="30"
+        />
+        <p>search counts: <output id="countValue"></output></p>
       </div>
+
+      <div class="interval-div">
+        <input
+          type="range"
+          id="searchInterval"
+          min="3"
+          max="10"
+          value="7"
+        />
+        <p>
+          search interval: <output id="intervalValue"></output>s <br />
+          (7s recommended)
+        </p>
+      </div>
+
+      <div class="search-div">
+        <button id="go_search">run script</button>
+        <p><strong id="completeSearch">0</strong> searches executed</p>
+      </div>
+
+      <p id="stop-guide">
+        <i>*click on extension or outside of this popup to stop script.</i>
+      </p>
     </div>
 
     <script src="popup.js"></script>
