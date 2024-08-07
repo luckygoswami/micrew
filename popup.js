@@ -5,6 +5,13 @@ const countValue = document.getElementById("countValue");
 const intervalValue = document.getElementById("intervalValue");
 const completeSearch = document.getElementById("completeSearch");
 
+const bingBtn = document.getElementById("bing");
+bingBtn.addEventListener("click", () => {
+  chrome.tabs.update({
+    url: "https://www.bing.com/search?pglt=41&q=a+stock+price&cvid=72d5d1c60d4c4439870c334b7da4f2b9&gs_lcrp=EgZjaHJvbWUqBggAEAAYQDIGCAAQABhAMgYIARAAGEAyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDQ4OTdqMGoxqAIIsAIB&FORM=ANNTA1&adppc=EDGEESS&PC=WSEDDB",
+  });
+});
+
 searchBtn.addEventListener("click", () => {
   for (let i = 0; i < parseInt(searchCount.value); i++) {
     setTimeout(() => {
