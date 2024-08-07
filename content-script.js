@@ -5,23 +5,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 function script() {
-  // const input = document.getElementById("sb_form_q");
-  // const searchBtn = document.getElementById("sb_form_go");
-  // input.textContent += `a`;
-  // searchBtn.click();
+  const input = document.getElementById("sb_form_q");
+  const searchBtn = document.getElementById("sb_form_go");
 
-  console.log("content script");
+  input.textContent = `a${input.value}`;
+  searchBtn.click();
 }
-
-// function script() {
-//   chrome.storage.local.set({ numero: "hey dude how are you" }).then(() => {
-//     console.log("value set");
-//   });
-//   for (let i = 0; i < 5; i++) {
-//     console.log(`from script ${i}`);
-//   }
-
-//   chrome.storage.local.get(["numero"]).then((res) => {
-//     console.log(`value is ${res.key}`);
-//   });
-// }
