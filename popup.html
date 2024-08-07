@@ -15,7 +15,7 @@
         id="searchCount"
         min="1"
         max="50"
-        value="15"
+        value="30"
       />
       <p>search counts: <output id="countValue"></output></p>
       <input
@@ -23,17 +23,18 @@
         id="searchInterval"
         min="3"
         max="10"
-        value="5"
+        value="7"
       />
-      <p>search interval: <output id="intervalValue"></output>s</p>
+      <p>
+        search interval: <output id="intervalValue"></output>s <br />
+        (7s recommended)
+      </p>
 
       <div class="search">
         <p>searches executed: <strong id="completeSearch">0</strong></p>
         <button id="go_search">start searching</button>
       </div>
     </div>
-
-    <button id="bing">open bing</button>
 
     <script src="popup.js"></script>
   </body>

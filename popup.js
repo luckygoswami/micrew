@@ -5,32 +5,46 @@ const countValue = document.getElementById("countValue");
 const intervalValue = document.getElementById("intervalValue");
 const completeSearch = document.getElementById("completeSearch");
 
-const bingBtn = document.getElementById("bing");
-bingBtn.addEventListener("click", () => {
-  chrome.tabs.update({
-    url: "https://www.bing.com/search?pglt=41&q=a+stock+price&cvid=72d5d1c60d4c4439870c334b7da4f2b9&gs_lcrp=EgZjaHJvbWUqBggAEAAYQDIGCAAQABhAMgYIARAAGEAyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDQ4OTdqMGoxqAIIsAIB&FORM=ANNTA1&adppc=EDGEESS&PC=WSEDDB",
-  });
-});
+function getTwoRandomLetters() {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const randomIndex1 = Math.floor(Math.random() * alphabet.length);
+  const randomIndex2 = Math.floor(Math.random() * alphabet.length);
+  return alphabet[randomIndex1] + alphabet[randomIndex2];
+}
 
 searchBtn.addEventListener("click", () => {
+  // changes the current tab url to bing.com
+  chrome.tabs.update({
+    url: `https://www.bing.com/search?go=Search&q=${getTwoRandomLetters()}+stock+price&qs=ds&form=QBRE`,
+  });
+
   for (let i = 0; i < parseInt(searchCount.value); i++) {
     setTimeout(() => {
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, { action: "runScript" });
+      // --to run script through content.js
+      // chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      //   chrome.tabs.sendMessage(tabs[0].id, { action: "runScript" });
+      // });
+
+      // --to run script right from this file
+      chrome.tabs.update({
+        url: `https://www.bing.com/search?go=Search&q=${getTwoRandomLetters()}+stock+price&qs=ds&form=QBRE`,
       });
-      console.log("search request send");
+
       completeSearch.textContent = i + 1;
     }, i * (parseInt(searchInterval.value) * 1000));
   }
 });
 
+// show count and interval value
 countValue.textContent = parseInt(searchCount.value);
 intervalValue.textContent = parseInt(searchInterval.value);
 
+// changes search counts dynamically
 searchCount.addEventListener("input", (e) => {
   countValue.textContent = e.target.value;
 });
 
+// changes search interval dynamically
 searchInterval.addEventListener("input", (e) => {
   intervalValue.textContent = e.target.value;
 });
