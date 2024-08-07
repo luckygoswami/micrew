@@ -1,6 +1,7 @@
 {
-  "name": "micrew",
+  "name": "Micrew",
   "version": "1.0",
+  "description": "Automatically search random stock prices on Bing to earn daily Microsoft Rewards points. Ensure you're logged into your Microsoft account on Bing before running the script to receive points.",
   "manifest_version": 3,
   "permissions": ["tabs"],
   "action": {
