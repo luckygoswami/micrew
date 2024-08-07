@@ -1,7 +1,6 @@
 const searchCount = document.getElementById("searchCount");
 const searchInterval = document.getElementById("searchInterval");
 const searchBtn = document.getElementById("go_search");
-const countValue = document.getElementById("countValue");
 const intervalValue = document.getElementById("intervalValue");
 const completeSearch = document.getElementById("completeSearch");
 
@@ -41,7 +40,19 @@ intervalValue.textContent = parseInt(searchInterval.value);
 
 // changes search counts dynamically
 searchCount.addEventListener("input", (e) => {
-  countValue.textContent = e.target.value;
+  if (e.target.value == 1) {
+    document.querySelector(
+      ".count-div p"
+    ).innerHTML = `search count: <span id="countValue"></span>`;
+  } else {
+    document.querySelector(
+      ".count-div p"
+    ).innerHTML = `search counts: <span id="countValue"></span>`;
+  }
+
+  // using document.queryselector because on using variable reference it's not working
+  // as variable reference remains same in memory and the element changes
+  document.querySelector("span#countValue").textContent = e.target.value;
 });
 
 // changes search interval dynamically
