@@ -9,7 +9,29 @@
     <title>Micrew</title>
   </head>
   <body>
-    <button id="go_search">start searching</button>
+    <div class="main">
+      <input
+        type="range"
+        id="searchCount"
+        min="1"
+        max="50"
+        value="15"
+      />
+      <p>search counts: <output id="countValue"></output></p>
+      <input
+        type="range"
+        id="searchInterval"
+        min="3"
+        max="10"
+        value="5"
+      />
+      <p>search interval: <output id="intervalValue"></output>s</p>
+
+      <div class="search">
+        <p>searches executed: <strong id="completeSearch">0</strong></p>
+        <button id="go_search">start searching</button>
+      </div>
+    </div>
 
     <script src="popup.js"></script>
   </body>

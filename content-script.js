@@ -5,10 +5,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 function script() {
-  const input = document.getElementById("sb_form_q");
-  const searchBtn = document.getElementById("sb_form_go");
-  input.textContent += `a`;
-  searchBtn.click();
+  // const input = document.getElementById("sb_form_q");
+  // const searchBtn = document.getElementById("sb_form_go");
+  // input.textContent += `a`;
+  // searchBtn.click();
+
+  console.log("content script");
 }
 
 // function script() {
