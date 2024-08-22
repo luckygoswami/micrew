@@ -12,8 +12,8 @@ function getTwoRandomLetters() {
 }
 
 function script() {
-  // const input = document.getElementById("sb_form_q");
-  // const searchBtn = document.getElementById("sb_form_go");
-  // input.textContent = `${getTwoRandomLetters()} stock price`;
-  // searchBtn.click();
+  const input = document.getElementById("sb_form_q");
+  const searchBtn = document.getElementById("sb_form_go");
+  input.textContent = `${getTwoRandomLetters()} stock price`;
+  searchBtn.click();
 }
