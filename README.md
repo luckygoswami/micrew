@@ -69,3 +69,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For any issues or questions, please open an issue on the [GitHub repository](https://github.com/luckygoswami/micrew).
+
+---
+
+_Made with 🧠 by LuckyGoswami_
