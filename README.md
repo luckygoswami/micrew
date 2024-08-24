@@ -38,11 +38,12 @@
 
 ## Installation
 
-1. Download or clone the repository.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable "Developer mode" using the toggle in the top right corner.
-4. Click "Load unpacked" and select the directory containing the extension files.
-5. The extension should now appear in your list of extensions.
+1. [Download Micrew](https://github.com/luckygoswami/Micrew/archive/refs/heads/main.zip) repository in compressed format.
+2. Extract the downloaded compressed file using archivers e.g. Winrar.
+3. Open Chrome and navigate to `chrome://extensions/`.
+4. Enable "Developer mode" using the toggle in the top right corner.
+5. Click "Load unpacked" and select the directory containing the extension files.
+6. The extension should now appear in your list of extensions.
 
 ## Usage
 
