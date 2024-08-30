@@ -2,6 +2,16 @@
 
 **Micrew** is a Chrome extension designed to automatically search for random stock prices on Bing, helping you earn daily Microsoft Rewards points. Ensure you are logged into your Microsoft account on Bing before running the script to receive points.
 
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Files](#files)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Notes](#notes)
+- [Troubleshooting](#troubleshooting)
+
 ## Features
 
 - Automatically searches for random stock prices on Bing.
