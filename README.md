@@ -8,6 +8,10 @@
 - Configurable search count and delay interval through the extension popup.
 - Provides a count of executed searches.
 
+## Screenshots
+
+![Micrew overview](https://github.com/luckygoswami/assets/blob/main/Micrew/demoVideo.gif?raw=true)
+
 ## Files
 
 1. **`manifest.json`**
